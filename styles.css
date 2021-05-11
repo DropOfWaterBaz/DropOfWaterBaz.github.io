@@ -245,6 +245,7 @@ input-container{
 @media screen and (max-width: 480px){
   input-container{
     font-size: .8em;
+    font-weight:400;
   }
 }
 
