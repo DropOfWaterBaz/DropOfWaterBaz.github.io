@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ENTP!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ENTP.png" />
+        </div>
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>E</u></b>xtraversion</char1>
+                <char2>i<b><u>N</u></b>tuition</char2>
+                <char3><b><u>T</u></b>hinking</char3>
+                <char4><b><u>P</u></b>erceiving</char4>
+            </div>
+
+            <p class="result-intro">ENTPs, also known as Debaters, get their nickname from the fact that they enjoy
+                arguing their opinions. Even if they don't believe in it, they love to play devil's advocate just for
+                the sake of having a conflicting stance. It gives them the chance to exercise their wittiness and
+                knowledge on certain topics. They learn by the way of the nickname - by debating.
+            </p>
+
+        </header-acronym>
+    </image-header-container>
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Sharpness</u>: Debaters are quick and clever. They know something about everything, often via experience
+            of debates past.</p>
+        <p>- <u>Brainstorms</u>: ENTPs can move from idea to idea quickly. They have original ideas which they use to
+            their advantage. </p>
+        <p>- <u>Energy</u>: ENTPs are high-energy people, this coupled with their enthusiasm makes it easier for them to
+            work long and hard when it is necessary.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Lack of Sensitivity</u>: Debaters spend a lot of their time opposing other people's views. This can
+            cause them to be insensitive, and even offensive towards others - including those that they care about. </p>
+        <p>- <u>Poor Focus</u>: For the same reason they're great at brainstorming, ENTPs can struggle sticking to one
+            idea or one train of though at a time. Their mind can often start wandering.</p>
+        <p>- <u>Intolerant & Argumentative</u>: Given that ENTPs are so strongly opinionated, they can often dismiss not
+            only opposing views but the people who hold them. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Debaters love to show off their knowledge, which can play to their strength in their careers as they put new
+            ideas on the board which can lead to new opportunities and possibilities.</p>
+        <p>ENTPs suit jobs that require creativity and problem-solving. Some careers like engineering or
+            entrepreneurship require these insights from the likes of a debater. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>Debaters are very contrary, however, they don't take these discussions to heart - as long as they stay
+            impersonal. They come from a line of logical thinking and can find it difficult to relate to others when it
+            comes to emotional expression. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous ENTPs</b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.8338;">
+                <img style="height:100%; width:100%"
+                    src="imgs/daVinci.jpeg">
+                <p class="name-one" style="text-align:center;">Leonardo da Vinci</p>
+            </div>
+
+            <div class="famous-two" style="flex:1;">
+                <img style="height:100%; width:100%"
+                    src="https://pbs.twimg.com/profile_images/537736236132474880/n0ugt0fg_400x400.jpeg">
+                <p class="name-two" style="text-align:center;">Joan Rivers</p>
+            </div>
+
+            <div class="famous-three" style="flex:.6666;">
+                <img style="height:100%; width:100%"
+                    src="imgs/ryanReynolds.jpeg">
+                <p class="name-three" style="text-align:center;">Ryan Reynolds</p>
+            </div>
+
+            <div class="famous-four" style="flex: .7525">
+                <img style="height:100%; width:100%"
+                    src="imgs/annaKendrick.jpeg">
+                <p class="name-four" style="text-align:center">Anna Kendrick</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+  </head>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg" />
+    <p class="centered-text">Your Personality is ENFJ!</p>
+  </div>
+
+  <body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+      <div class="summary-image">
+        <img src="imgs/ENFJ.png" />
+      </div>
+
+      <header-acronym>
+        <div class="deacronym">
+          <char1
+            ><b><u>E</u></b
+            >xtraversion</char1
+          >
+          <char2
+            >i<b><u>N</u></b
+            >tuition</char2
+          >
+          <char3
+            ><b><u>F</u></b
+            >eeling</char3
+          >
+          <char4
+            ><b><u>J</u></b
+            >udging</char4
+          >
+        </div>
+
+        <p class="result-intro">
+          ENFJs or Protagonists are passionate and charismatic people. They have
+          strong leadership skills that they use in conjunction with enthusiasm.
+          They are not afraid of speaking out for what they believe needs to be
+          said. They have a fantastic ability to articulate themselves eloquently and clear communication comes naturally to them.
+        </p>
+      </header-acronym>
+    </image-header-container>
+    <div class="result-container">
+      <h2 style="margin-top: 5%">
+        <b>Strengths vs. Weaknesses</b>
+      </h2>
+      <u><b>Strengths</b></u>
+      <p>
+        - <u>Selflessness</u>: Protagonists are generous people who like to
+        contribute to the community around them. They are warm and caring. Those around them know that their generosity doesn't spur from a secret motive but it's just what they like to do and therefore they are well-liked by their peers.
+      </p>
+      <p>
+        - <u>Peacekeeper</u>: Using their strong leadership qualities, they can
+        diffuse conflict with powerful persuasion and good communication. They use their charisma to make light of serious situation and promote harmony amongst groups.
+      </p>
+      <p>
+        - <u>Reliabilty</u>: ENFJs are extremely reliable because they hate the thought
+        of letting someone else down. They can always be counted on to follow up on plans and do what needs to be done.
+      </p>
+
+      <u><b>Weaknesses</b></u>
+      <p>
+        - <u>Decisiveness</u>: A tough decision can leave protagonists feeling
+        paralysed, overthinking the consequences of either outcome of their
+        choice. They want the outcome of their choice to please everyone involved, which is a very rare occurrence. Therefore, the bigger the decision, the more difficult they find it to make.
+      </p>
+      <p>
+        - <u>Self-Esteem</u>: ENFJs hold themselves to a high standard, and their self-esteem is majorly dependent on whether or not they reach
+        these standards. These standards being so high often results in the inability to meet them, resulting in the protagonist's self-esteem to take a substantial blow.
+      </p>
+      <p>
+        - <u>Sensitivity</u>: ENFJs accept criticism as it can be used to
+        improve themselves and those around them, but they may take it too
+        seriously. The main reason they struggle with this is that they want to please others and once again, the thought of letting someone down is a scary one to say the least. They can think too much about these critique and upset themselves
+        by doing so.  
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Careers</b>
+      </h2>
+      <p>
+        Protagonists are fantastic at rallying people together to make a
+        cooperative effort as a team. They can delegate, supervise and steer
+        others in the right direction. They keep harmony amongst the group they
+        are in. They are natural-born leaders and their peacekeeping abilities means they do well in jobs where they work with others in an authoritative capacity.
+      </p>
+      <p>
+        ENFJs are certainly suited to a leadership role in a managerial,
+        administrative or political position.
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Relationships</b>
+      </h2>
+      <p>
+        ENFJs are very active in their relationships, putting in effort to
+        maintaining their connections with those who matter most to them. They
+        see their relationships as hugely important. They are sincere and are
+        genuinely interested in their friends feelings and aspirations.
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Famous ENFJs</b>
+      </h2>
+      <celeb-container>
+        <div class="famous-one" style="flex: 0.8">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/aoc.jpeg"
+          />
+          <p class="name-one" style="text-align: center">
+            Alexandria Ocasio-Cortez
+          </p>
+        </div>
+
+        <div class="famous-two" style="flex: 1.333">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/tupac.jpeg"
+          />
+          <p class="name-two" style="text-align: center">Tupac Shakur</p>
+        </div>
+
+        <div class="famous-three" style="flex: 1">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/malala.jpeg"
+          />
+          <p class="name-three" style="text-align: center">Malala Yousazai</p>
+        </div>
+
+        <div class="famous-four" style="flex: 1">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/drake.jpeg"
+          />
+          <p class="name-four" style="text-align: center">Drake</p>
+        </div>
+      </celeb-container>
+
+      <p style="text-align: center">
+        How do you feel about this result? Let me know in the box below!
+      </p>
+
+      <div class="feedback-container">
+        <form id="feedbackBox">
+          <textarea
+            style="width: 100%"
+            id="feedback-box"
+            class="feedback-box"
+            name="feedback-box"
+            placeholder="Feedback"
+          ></textarea>
+
+          <div class="submit-container">
+            <input type="submit" class="submit-button" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <form action="index.html">
+        <div class="home-button-container">
+          <button type="submit" class="home-button">Home</button>
+        </div>
+      </form>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+        authDomain: "finalyearproject-6432e.firebaseapp.com",
+        databaseURL:
+          "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "finalyearproject-6432e",
+        storageBucket: "finalyearproject-6432e.appspot.com",
+        messagingSenderId: "734834590765",
+        appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+        measurementId: "G-4EH7TT67P5",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      var feedbackRef = firebase.database().ref("Collected Data");
+
+      document
+        .getElementById("feedbackBox")
+        .addEventListener("submit", submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+
+        var feedback = getInputVal("feedback-box");
+
+        saveFeedback(feedback);
+        document.getElementById("feedbackBox").reset();
+      }
+
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+
+      // Save message to firebase
+      function saveFeedback(feedback) {
+        var newFeedbackRef = feedbackRef.push();
+        newFeedbackRef.set({
+          feedback: feedback,
+        });
+      }
+    </script>
+  </body>
+</html>

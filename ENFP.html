@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg" />
+    <p class="centered-text">Your Personality is ENFP!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+        <img src="imgs/ENFP.png" />
+        </div>
+
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>E</u></b>xtraversion</char1>
+                <char2>i<b><u>N</u></b>tuition</char2>
+                <char3><b><u>F</u></b>eeling</char3>
+                <char4><b><u>P</u></b>erceiving</char4>
+            </div>
+
+            <p class="result-intro">
+                ENFPs or Campaigners are known to be some of the most charismatic and
+                lively of people. They are kind and idealistic people-pleasers. ENFPs
+                see life as a big puzzle - a puzzle of emotion and deeper meaning as
+                opposed to merely a series of factual jigsaw pieces. They don't take
+                things at face value and aren't afraid to question authority. ENFPs are very sociable beings and they are missed when not at parties. They love to meet new people and learn about different experiences and perceptions of the world.
+            </p>
+        </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+    <h2 style="margin-top: 5%">
+        <b>Strengths vs. Weaknesses</b>
+    </h2>
+    <u><b>Strengths</b></u>
+    <p>
+        - <u>Curiosity</u>: ENFPs like to experience new things, explore the unknown and
+        learn. They are open-minded so almost no adventure is off-limits and they have usually have no problem leaving their comfort zone in order to pursuit these new and exciting experiences.
+    </p>
+    <p>
+        - <u>Observation</u>: Everything is relevant. Campaigners believe that any small
+        action can effect the outcome in a significant way. They are firm believers of the "Butterfly Effect" and this means they don't dismiss any detail. It also means that they have good lateral-thinking abilities as these fine details aren't disregarded when problem-solving.
+    </p>
+    <p>
+        - <u>Social Skills</u>: ENFPs tend to be highly social. As a result, they are
+        great communicators, know a wide range of people and are quite
+        enthusiastic. As they tend to talk to a lot of people, they have a wonderful ability to empathise with situations that don't necessarily relate to them - chances are they know someone that it does relate to and have heard the effects something's had on them.
+    </p>
+
+    <u><b>Weaknesses</b></u>
+    <p>
+        - <u>Highly Emotional</u>: Emotions are what make us human. However, Campaigners
+        can have mood swings or be prone to stress as a result. They can unknowingly take things out on others which will strain relationships. Additionally, their current mood can significantly affect their self-esteem. They could be frustrated by a difficult problem which may cause them to evaluate their self-worth based on their ability to solve the issue.
+    </p>
+    <p>
+        - <u>Overthinking</u>: As they tend to look into the deeper meaning of
+        situations, ENFPs can tend to find issues that aren't necessarily there.
+        To them, there is more often more than meets the eye to a situation, but
+        they're not always right. This can result lead to worrying about issues
+        that may not exist.
+    </p>
+    <p>
+        - <u>Poor Concentration</u>: This can also be considered to be the downfall of
+        the ENFP's curiosity. They spend time daydreaming about the "what-ifs" and can lose sight on the task at hand. They affinity for thinking about new possibilities and things
+        that mystify them is something that is not all too helpful when there's a deadline
+        at midnight tonight.
+    </p>
+
+    <h2 style="margin-top: 5%">
+        <b>Careers</b>
+    </h2>
+    <p>
+        Campaigners tend to prefer a "laissez-faire" type fo career, meaning that
+        they tend to like jobs in which they have freedom to be creative and can
+        express their ideas. They are explorers, who want to push the boundaries
+        in both their personal <i>and</i> professional lives. Repetitive jobs do
+        not suit ENFPs - they want variation and to try new things.
+    </p>
+    <p>
+        A career like journalism, reporting, or even theatre and acting in the
+        media industry may satisfy the desire of ENFPs to discover interesting
+        things and avoid monotony.
+    </p>
+
+    <h2 style="margin-top: 5%">
+        <b>Relationships</b>
+    </h2>
+    <p>
+        Due to their social nature and deep-thinking, ENFPs can get quite involved
+        in the lives of others, and are prone to putting others ahead of
+        themselves. The love they have for their friends, family and partners can
+        also have its consequences. They're idealistic way of thinking can be a
+        cause for naivety - expecting the best from people in a world where life
+        is often unfair. This may cause strain in a relationship when they find
+        out the other person may not be as perfect as they had hoped.
+    </p>
+
+    <h2 style="margin-top: 5%">
+        <b>Famous ENFPs</b>
+    </h2>
+    <celeb-container>
+        <div class="famous-one" style="flex: 1">
+            <img style="height: 100%; width: 100%"
+                src="imgs/mac.jpeg"/>
+            <p clas="name-one" style="text-align: center">Mac Miller</p>
+        </div>
+
+        <div class="famous-two"style="flex: 0.819">
+            <img style="height: 100%; width: 100%"
+                src="imgs/phoebe.jpeg" />
+            <p class="name-two"style="text-align: center">Phoebe Buffay (Friends)</p>
+        </div>
+
+        <div class="famous-three"style="flex: 0.713">
+            <img style="height: 100%; width: 100%"
+                src="imgs/Anne-Frank.jpeg" />
+            <p class="name-three" style="text-align: center">Anne Frank</p>
+        </div>
+
+        <div class="famous-four" style="flex: 0.7802">
+            <img style="height: 100%; width: 100%"
+                src="imgs/che.jpeg" />
+            <p class="name-four"style="text-align: center">Ernesto "Che" Guevara</p>
+        </div>
+    </celeb-container>
+
+    <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+        </div>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+   <script>
+       // Your web app's Firebase configuration
+       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+       var firebaseConfig = {
+           apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+           authDomain: "finalyearproject-6432e.firebaseapp.com",
+           databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+           projectId: "finalyearproject-6432e",
+           storageBucket: "finalyearproject-6432e.appspot.com",
+           messagingSenderId: "734834590765",
+           appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+           measurementId: "G-4EH7TT67P5"
+       };
+       // Initialize Firebase
+       firebase.initializeApp(firebaseConfig);
+       firebase.analytics();
+
+       var feedbackRef = firebase.database().ref('Collected Data');
+
+       document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+       function submitForm(e) {
+           e.preventDefault();
+
+           var feedback = getInputVal('feedback-box');
+
+           saveFeedback(feedback);
+           document.getElementById('feedbackBox').reset();
+       }
+
+       function getInputVal(id) {
+           return document.getElementById(id).value;
+       }
+
+       // Save message to firebase
+       function saveFeedback(feedback) {
+           var newFeedbackRef = feedbackRef.push();
+           newFeedbackRef.set({
+               feedback: feedback,
+           });
+       }
+   </script>
+
+</body>
+
+</html>

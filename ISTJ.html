@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ISTJ!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ISTJ.png" />
+        </div>
+
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>I</u></b>ntroversion</char1>
+                <char2><b><u>S</u></b>ensing</char2>
+                <char3><b><u>T</u></b>hinking</char3>
+                <char4><b><u>J</u></b>udging</char4>
+            </div>
+
+            <p class="result-intro">
+                ISTJs or Logisticians (not to be confused with the Logician
+                personality) have a rational perspective on reality. They are very
+                deliberate in their actions and waste no time on the task at hand.
+                Logisticians are not the type to leave work to the last minute, and
+                will become irritable if they do so. They use facts and clear
+                information to come to their conclusions and to make their
+                decisions. They trust their self-reliance more than that of others.
+            </p>
+        </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+        <h2 style="margin-top: 5%">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>
+            - <u>Responsibility</u>: Logisticians are reliable people and stick to their
+            word. They do what needs to be done and don't laze around. They would
+            rather work to the point of self-exhaustion than fail to deliver.
+        </p>
+        <p>
+            - <u>All-rounders</u>: ISTJs have a great capacity to retain information on a
+            wide range of topics. Coupled with their ability to pick things up
+            quickly, they are able to be of use in almost all situations.
+        </p>
+        <p>
+            - <u>Attention to Detail</u>: If a logistician has to do something, they make
+            sure they get it done right. They don't cut corners and can be relied
+            on to perfect each facet of what they do to the best of their ability.
+        </p>
+
+        <u><b>Weaknesses</b></u>
+        <p>
+            - <u>Obedience to Rules</u>: Though there is nothing wrong with being
+            respectful of rules, ISTJs make take this too far. They refuse to do
+            anything that could even be <i>perceived</i> as breaking the rules.
+            This can result in a lack of innovation and originality
+        </p>
+        <p>
+            - <u>Judgemental</u>: As logisticians see the world mostly through rationale,
+            they can be quick to dismiss those with opposite opinions to them.
+            This stubbornness can make them close-minded and have a lack of
+            respect for those with different perspectives.
+        </p>
+        <p>
+            - <u>Insensitivity</u>: As they communicate via facts and information, ISTJs
+            can often miss the chance to be tactful with their words. They don't
+            always consider the feelings of others when they say something, which
+            can upset their loved ones or cause conflict to arise.
+        </p>
+
+        <h2 style="margin-top: 5%">
+            <b>Careers</b>
+        </h2>
+        <p>
+            Logisticians seek professional stability, they tend to lean away from
+            freelance or consultancy work. Traditionalists themselves, may ISTJs
+            find themselves winding up in long-established institutions such as
+            law enforcement, the military and other roles in which they feel they
+            can contribute to society as a whole.
+        </p>
+        <p>
+            Of course, these are not the only desires of ISTJs in their career.
+            They like to work in a position that they can use their knowledge and
+            there isn't too may abstract aspects of the job - such roles may be as
+            an accountant, in administration or data analysts.
+        </p>
+
+        <h2 style="margin-top: 5%">
+            <b>Relationships</b>
+        </h2>
+        <p>
+            Logisticians are not the type to plan a random adventure with their
+            social circle. Not to say they aren't fun, but they like to know in
+            advance if there are any events upcoming and don't tend to do things
+            on a whim. They can be slow to make friends, treading carefully, but
+            this means that those that they do form relationships with have their
+            loyalty and trust. They aren't the most emotionally formidable, but
+            they express them through what they do and not what they say. They
+            enjoy the company of extraverts as they can fill most of the
+            conversation and the burden to make chat isn't on them. They don't
+            like getting into conflict and this is a reason that many people they
+            surround themselves with have similar principles and opinions.
+        </p>
+
+        <h2 style="margin-top: 5%">
+            <b>Famous ISTJs</b>
+        </h2>
+        <celeb-container>
+            <div class="famous-one" style="flex: 0.8217">
+                <img style="height: 100%; width: 100%"
+                    src="imgs/merkel.jpeg" />
+                <p class="name-one" style="text-align: center">Angela Merkel</p>
+            </div>
+
+            <div class="famous-two" style="flex: 0.6916">
+                <img style="height: 100%; width: 100%"
+                    src="imgs/holt.jpeg" />
+                <p class="name-two" style="text-align: center">Raymond Holt (Brooklyn-99)</p>
+            </div>
+
+            <div class="famous-three" style="flex: 0.746">
+                <img style="height: 100%; width: 100%"
+                    src="imgs/natPortman.jpeg" />
+                <p class="name-three" style="text-align: center">Natalie Portman</p>
+            </div>
+
+            <div class="famous-four" style="flex: 0.5626">
+                <img style="height: 100%; width: 100%"
+                    src="imgs/morganFreeman.jpeg" />
+                <p class="name-four" style="text-align: center">Morgan Freeman</p>
+            </div>
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

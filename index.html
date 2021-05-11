@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>dbaz Personality Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<div class="overlay-container">
+  <img src="imgs/banner.jpeg">
+  <p class="centered-text">Welcome to the dbaz Personality Quiz!</p>
+</div>
+
+<body class="home" ng-app="FYP" ng-controller="QuizController">
+  <div style="overflow-x:scroll;">
+    <div class="intro">Hello! This is a short personality quiz I have programmed for my Final Year Project. Simply
+      indicate how strongly you agree or disagree with the 16 following statements. All feedback is appreciated! - Dan
+      <3</div>
+
+        <div class="question-one">I feel comfortable in groups and like working in them.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="6" id="strong-ag-input-1" required>
+          <label id="strong-ag" for="strong-ag-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="5" id="mid-ag-input-1">
+          <label id="mid-ag" for="mid-ag-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="4" id="min-ag-input-1">
+          <label id="min-ag" for="min-ag-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="3" id="indifferent-input-1">
+          <label id="indifferent" for="indifferent-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="2" id="min-dis-input-1">
+          <label id="min-dis" for="min-dis-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="1" id="mid-dis-input-1">
+          <label id="mid-dis" for="mid-dis-input-1"> </label>
+
+          <input type="radio" key="EI" ng-model="q1" name="radio1" ng-value="0" id="strong-dis-input-1">
+          <label id="strong-dis" for="strong-dis-input-1"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-two">People who know me would consider me to be quiet.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="0" id="strong-ag-input-2">
+          <label id="strong-ag" for="strong-ag-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="1" id="mid-ag-input-2">
+          <label id="mid-ag" for="mid-ag-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="2" id="min-ag-input-2">
+          <label id="min-ag" for="min-ag-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="3" id="indifferent-input-2">
+          <label id="indifferent" for="indifferent-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="4" id="min-dis-input-2">
+          <label id="min-dis" for="min-dis-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="5" id="mid-dis-input-2">
+          <label id="mid-dis" for="mid-dis-input-2"> </label>
+
+          <input type="radio" key="EI" ng-model="q2" name="radio2" ng-value="6" id="strong-dis-input-2">
+          <label id="strong-dis" for="strong-dis-input-2"> </label>
+          Disagree
+        </input-container>
+
+
+        <div class="question-three">I prefer to be introduced than to introduce myself.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="0" id="strong-ag-input-3">
+          <label id="strong-ag" for="strong-ag-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="1" id="mid-ag-input-3">
+          <label id="mid-ag" for="mid-ag-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="2" id="min-ag-input-3">
+          <label id="min-ag" for="min-ag-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="3" id="indifferent-input-3">
+          <label id="indifferent" for="indifferent-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="4" id="min-dis-input-3">
+          <label id="min-dis" for="min-dis-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="5" id="mid-dis-input-3">
+          <label id="mid-dis" for="mid-dis-input-3"> </label>
+
+          <input type="radio" key="EI" ng-model="q3" name="radio3" ng-value="6" id="strong-dis-input-3">
+          <label id="strong-dis" for="strong-dis-input-3"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-four"> I have a wide range of friends and know lots of people. </div>
+        <input-container>
+          Agree
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="6" id="strong-ag-input-4">
+          <label id="strong-ag" for="strong-ag-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="5" id="mid-ag-input-4">
+          <label id="mid-ag" for="mid-ag-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="4" id="min-ag-input-4">
+          <label id="min-ag" for="min-ag-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="3" id="indifferent-input-4">
+          <label id="indifferent" for="indifferent-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="2" id="min-dis-input-4">
+          <label id="min-dis" for="min-dis-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="1" id="mid-dis-input-4">
+          <label id="mid-dis" for="mid-dis-input-4"> </label>
+
+          <input type="radio" key="EI" ng-model="q4" name="radio4" ng-value="0" id="strong-dis-input-4">
+          <label id="strong-dis" for="strong-dis-input-4"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-five">I start with the basic facts and then form the bigger picture.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="0" id="strong-ag-input-5">
+          <label id="strong-ag" for="strong-ag-input-5"> </label>
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="1" id="mid-ag-input-5">
+          <label id="mid-ag" for="mid-ag-input-5"> </label>
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="2" id="min-ag-input-5">
+          <label id="min-ag" for="min-ag-input-5"> </label>
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="3" id="indifferent-input-5">
+          <label id="indifferent" for="indifferent-input-5"> </label>
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="4" id="min-dis-input-5">
+          <label id="min-dis" for="min-dis-input-5"> </label>
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="5" id="mid-dis-input-5">
+          <label id="mid-dis" for="mid-dis-input-5"> </label>
+
+
+          <input type="radio" key="SN" ng-model="q5" name="radio5" ng-value="6" id="strong-dis-input-5">
+          <label id="strong-dis" for="strong-dis-input-5"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-six">I'm more of a literal person than a metaphorical person.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="0" id="strong-ag-input-6">
+          <label id="strong-ag" for="strong-ag-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="1" id="mid-ag-input-6">
+          <label id="mid-ag" for="mid-ag-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="2" id="min-ag-input-6">
+          <label id="min-ag" for="min-ag-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="3" id="indifferent-input-6">
+          <label id="indifferent" for="indifferent-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="4" id="min-dis-input-6">
+          <label id="min-dis" for="min-dis-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="5" id="mid-dis-input-6">
+          <label id="mid-dis" for="mid-dis-input-6"> </label>
+
+          <input type="radio" key="SN" ng-model="q6" name="radio6" ng-value="6" id="strong-dis-input-6">
+          <label id="strong-dis" for="strong-dis-input-6"> </label>
+          Disagree
+        </input-container>
+
+
+        <div class="question-seven">I spend more time thinking about the future than what's going on now.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="SN" ng-model="q7" name="radio7" ng-value="6" id="strong-ag-input-7">
+          <label id="strong-ag" for="strong-ag-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio7" ng-value="5" id="mid-ag-input-7">
+          <label id="mid-ag" for="mid-ag-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio7" ng-value="4" id="min-ag-input-7">
+          <label id="min-ag" for="min-ag-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio3" ng-value="3" id="indifferent-input-7">
+          <label id="indifferent" for="indifferent-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio7" ng-value="2" id="min-dis-input-7">
+          <label id="min-dis" for="min-dis-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio3" ng-value="1" id="mid-dis-input-7">
+          <label id="mid-dis" for="mid-dis-input-7"> </label>
+
+          <input type="radio" key="SN" ng-model="q7" name="radio7" ng-value="0" id="strong-dis-input-7">
+          <label id="strong-dis" for="strong-dis-input-7"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-eight">I'm more of a creative person than a practical person - I can understand concepts
+          better
+          than I can build something. </div>
+        <input-container>
+          Agree
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="6" id="strong-ag-input-8">
+          <label id="strong-ag" for="strong-ag-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="5" id="mid-ag-input-8">
+          <label id="mid-ag" for="mid-ag-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="4" id="min-ag-input-8">
+          <label id="min-ag" for="min-ag-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="3" id="indifferent-input-8">
+          <label id="indifferent" for="indifferent-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="2" id="min-dis-input-8">
+          <label id="min-dis" for="min-dis-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="1" id="mid-dis-input-8">
+          <label id="mid-dis" for="mid-dis-input-8"> </label>
+
+          <input type="radio" key="SN" ng-model="q8" name="radio8" ng-value="0" id="strong-dis-input-8">
+          <label id="strong-dis" for="strong-dis-input-8"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-nine">I believe it's more important to "brutally honest" than to be mindful of someone's
+          feelings.
+        </div>
+        <input-container>
+          Agree
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="0" id="strong-ag-input-9">
+          <label id="strong-ag" for="strong-ag-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="1" id="mid-ag-input-9">
+          <label id="mid-ag" for="mid-ag-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="2" id="min-ag-input-9">
+          <label id="min-ag" for="min-ag-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="3" id="indifferent-input-9">
+          <label id="indifferent" for="indifferent-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="4" id="min-dis-input-9">
+          <label id="min-dis" for="min-dis-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="5" id="mid-dis-input-9">
+          <label id="mid-dis" for="mid-dis-input-9"> </label>
+
+          <input type="radio" key="TF" ng-model="q9" name="radio9" ng-value="6" id="strong-dis-input-9">
+          <label id="strong-dis" for="strong-dis-input-9"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-ten">I'm more interested in the way someone says something than what they say.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="6" id="strong-ag-input-10">
+          <label id="strong-ag" for="strong-ag-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="5" id="mid-ag-input-10">
+          <label id="mid-ag" for="mid-ag-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="4" id="min-ag-input-10">
+          <label id="min-ag" for="min-ag-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="3" id="indifferent-input-10">
+          <label id="indifferent" for="indifferent-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="2" id="min-dis-input-10">
+          <label id="min-dis" for="min-dis-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="1" id="mid-dis-input-10">
+          <label id="mid-dis" for="mid-dis-input-10"> </label>
+
+          <input type="radio" key="TF" ng-model="q10" name="radio10" ng-value="0" id="strong-dis-input-10">
+          <label id="strong-dis" for="strong-dis-input-10"> </label>
+          Disagree
+        </input-container>
+
+
+        <div class="question-eleven">I tend to listen to my heart more than my head.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="6" id="strong-ag-input-11">
+          <label id="strong-ag" for="strong-ag-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="5" id="mid-ag-input-11">
+          <label id="mid-ag" for="mid-ag-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="4" id="min-ag-input-11">
+          <label id="min-ag" for="min-ag-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="3" id="indifferent-input-11">
+          <label id="indifferent" for="indifferent-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="2" id="min-dis-input-11">
+          <label id="min-dis" for="min-dis-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="1" id="mid-dis-input-11">
+          <label id="mid-dis" for="mid-dis-input-11"> </label>
+
+          <input type="radio" key="TF" ng-model="q11" name="radio11" ng-value="0" id="strong-dis-input-11">
+          <label id="strong-dis" for="strong-dis-input-11"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-twelve">I can be more idealistic than realistic.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="6" id="strong-ag-input-12">
+          <label id="strong-ag" for="strong-ag-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="5" id="mid-ag-input-12">
+          <label id="mid-ag" for="mid-ag-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="4" id="min-ag-input-12">
+          <label id="min-ag" for="min-ag-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="3" id="indifferent-input-12">
+          <label id="indifferent" for="indifferent-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="2" id="min-dis-input-12">
+          <label id="min-dis" for="min-dis-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="1" id="mid-dis-input-12">
+          <label id="mid-dis" for="mid-dis-input-12"> </label>
+
+          <input type="radio" key="TF" ng-model="q12" name="radio12" ng-value="0" id="strong-dis-input-12">
+          <label id="strong-dis" for="strong-dis-input-12"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-thirteen">I can often leave things to the last minute.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="6" id="strong-ag-input-13">
+          <label id="strong-ag" for="strong-ag-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="5" id="mid-ag-input-13">
+          <label id="mid-ag" for="mid-ag-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="4" id="min-ag-input-13">
+          <label id="min-ag" for="min-ag-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="3" id="indifferent-input-13">
+          <label id="indifferent" for="indifferent-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="2" id="min-dis-input-13">
+          <label id="min-dis" for="min-dis-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="1" id="mid-dis-input-13">
+          <label id="mid-dis" for="mid-dis-input-13"> </label>
+
+          <input type="radio" key="JP" ng-model="q13" name="radio13" ng-value="0" id="strong-dis-input-13">
+          <label id="strong-dis" for="strong-dis-input-13"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-fourteen">Those around me would consider me to be a hard worker.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="0" id="strong-ag-input-14">
+          <label id="strong-ag" for="strong-ag-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="1" id="mid-ag-input-14">
+          <label id="mid-ag" for="mid-ag-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="2" id="min-ag-input-14">
+          <label id="min-ag" for="min-ag-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="3" id="indifferent-input-14">
+          <label id="indifferent" for="indifferent-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="4" id="min-dis-input-14">
+          <label id="min-dis" for="min-dis-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="5" id="mid-dis-input-14">
+          <label id="mid-dis" for="mid-dis-input-14"> </label>
+
+          <input type="radio" key="JP" ng-model="q14" name="radio14" ng-value="6" id="strong-dis-input-14">
+          <label id="strong-dis" for="strong-dis-input-14"> </label>
+          Disagree
+        </input-container>
+
+
+        <div class="question-fifteen">My motivation comes in bursts.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="6" id="strong-ag-input-15">
+          <label id="strong-ag" for="strong-ag-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="5" id="mid-ag-input-15">
+          <label id="mid-ag" for="mid-ag-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="4" id="min-ag-input-15">
+          <label id="min-ag" for="min-ag-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="3" id="indifferent-input-15">
+          <label id="indifferent" for="indifferent-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="2" id="min-dis-input-15">
+          <label id="min-dis" for="min-dis-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="1" id="mid-dis-input-15">
+          <label id="mid-dis" for="mid-dis-input-15"> </label>
+
+          <input type="radio" key="JP" ng-model="q15" name="radio15" ng-value="0" id="strong-dis-input-15">
+          <label id="strong-dis" for="strong-dis-input-15"> </label>
+          Disagree
+        </input-container>
+
+        <div class="question-sixteen">I find it difficult to unwind and relax.</div>
+        <input-container>
+          Agree
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="6" id="strong-ag-input-16">
+          <label id="strong-ag" for="strong-ag-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="5" id="mid-ag-input-16">
+          <label id="mid-ag" for="mid-ag-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="4" id="min-ag-input-16">
+          <label id="min-ag" for="min-ag-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="3" id="indifferent-input-16">
+          <label id="indifferent" for="indifferent-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="2" id="min-dis-input-16">
+          <label id="min-dis" for="min-dis-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="1" id="mid-dis-input-16">
+          <label id="mid-dis" for="mid-dis-input-16"> </label>
+
+          <input type="radio" key="JP" ng-model="q16" name="radio16" ng-value="0" id="strong-dis-input-16">
+          <label id="strong-dis" for="strong-dis-input-16"> </label>
+          Disagree
+        </input-container>
+
+        <div class="results-button-container" style="display:flex;align-content:center; justify-content: center;">
+          <button type="submit" id="next-button" class="next-button" onclick="calculateScore()">Results</button>
+        </div>
+    </div>
+</body>
+
+</html>

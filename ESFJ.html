@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="result-banner-container">
+    
+<img src="imgs/results-banner.jpeg">
+<p class="centered-text">Your Personality is ESFJ!</p>
+</div>
+
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ESFJ.png" />
+        </div>
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>E</u></b>xtraversion</char1>
+                <char2><b><u>S</u></b>ensing</char2>
+                <char3><b><u>F</u></b>eeling</char3>
+                <char4><b><u>J</u></b>udging</char4>
+            </div>
+
+            <p class="result-intro">ESFJs or Consuls are typically very popular people. Both as a cause and as an effect
+                of this, they are extremely social. They are the kind of people to host an event and make sure everyone
+                is included and having a good time. Consuls don't care much for the the things they feel they can't
+                control like foreign politics but have more interest in the latest social happenings. Nearby events and
+                new trends in fashion are more to their liking. However, this is not to say they are superficial. They
+                believe that they have a moral duty to do the right thing for others.
+            </p>
+
+        </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Loyalty</u>: Consuls love their friends and family and would do anything for them. They are very
+            trustworthy as that's what they expect from others - they value personal security.</p>
+        <p>- <u>Sensitivity to Others</u>: Kind and caring, ESFJs make sure that everyone gets along and they make sure
+            not to hurt anyone's feelings.</p>
+        <p>- <u>Reliability</u>: Consuls feel that they are obliged to stick to their arrangements. If they make plans
+            to go somewhere with a friend, they'll make sure that they're there.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Social Anxiety</u>: A lot of consuls place too much emphasis on their social status. They can care too
+            much whether people like them or not - it could be said that this reason is the source of their above
+            strengths. </p>
+        <p>- <u>Overly Critical</u>: ESFJs don't like things going against the status quo. They can be close-minded
+            against things that are socially uncommon such as unusual styles or behaviours. </p>
+        <p>- <u>Self Expression</u>: Just as ESFJs are critical of others, one of their greatest fears are that others
+            will be critical of them. For this reason, they don't tend to fully express themselves in case someone
+            thinks they come across a bit strange or abnormal.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Consuls make good leaders. They ensure that the peace is kept and they are well-organised. As long as they
+            have some sort of social life within their profession, repetitive tasks don't bother them. They do what's
+            asked of them and it keeps them in a routine. </p>
+        <p>Administrative roles suit consuls well. Social interaction is the main aspect if their job and it keeps them
+            busy. They are practical and stay satisfied by keeping their colleagues and customers happy.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>ESFJs tend to have wide social circles. They're easy to get along with and strive to be good friends. They
+            don't mind putting work into their relationships because it doesn't feel like work to them, just time
+            well-spent. They put their close ones on a pedestal, but this can lead to consuls expecting too much from
+            them and getting needy.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous ESFJs</b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.654;">
+                <img style="height:100%; width:100%"
+                    src="imgs/spongebob.png">
+                <p class="name-one" style="text-align:center;">Spongebob Squarepants</p>
+            </div>
+
+            <div class="famous-two" style="flex:.665">
+                <img style="height:100%; width:100%"
+                    src="imgs/taylorswift.jpeg">
+                <p class="name-two" style="text-align:center;">Taylor Swift</p>
+            </div>
+
+            <div class="famous-three" style="flex:.799;">
+                <img style="height:100%; width:100%"
+                    src="imgs/graceKelly.jpeg">
+                <p class="name-three" style="text-align:center;">Grace Kelly</p>
+            </div>
+
+            <div class="famous-four" style="flex:.797;">
+                <img style="height:100%; width:100%"
+                    src="imgs/jimmyFallon.jpeg">
+                <p class="name-four" style="text-align:center;">Jimmy Fallon</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ISFP!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ISFP.png" />
+        </div>
+        <header-acronym>
+
+            <div class="deacronym">
+                <char1><b><u>I</u></b>ntroversion</char1>
+                <char2><b><u>S</u></b>ensing</char2>
+                <char3><b><u>F</u></b>eeling</char3>
+                <char4><b><u>P</u></b>erceiving </char4>
+            </div>
+
+            <p class="result-intro">ISFPs or Adventurers tend to be comfortable in their own skin. They like to push the
+                limits of of what's conventionally socially acceptable. Despite challenging traditional views, they
+                still are introverts and like to keep to themselves. Those who do get to be close with adventurers know
+                them as warm and friendly.</p>
+        </header-acronym> 
+    </image-header-container>
+    
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Compassion</u>: Adventurers have a good sense of empathy. They relate well to others emotionally, which
+            makes the amicable and are rarely the reason for conflict.</p>
+        <p>- <u>Persuasion</u>: ISFPs ability to relate ot others makes it easier for them to speak heart-to-heart with
+            others. </p>
+        <p>- <u>Artistic</u>: Challengers of social norms, ISFPs like to stand out and do so via artistic expression.
+            They can convey their creativity well through visual and musical means.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Impulsiveness</u>: ISFPs can often struggle to stick to plan. This can result in them being seen as
+            unreliable and can put a strain on their platonic and romantic relationships. It also can cause personal
+            issues such as poor financial planning and time management.</p>
+        <p>- <u>Self-Esteem</u>: Adventurers are very artistic people, however art is subjective and it's easy to fall
+            under self-criticism over something that's not very quantifiable. You can't give a painting a percentage -
+            one person may love it and another may hate it. If an adventurer is self-critical or receive negative
+            feedback from others, this can have a detrimental effect on their self-esteem.</p>
+        <p>- <u>Stress Management</u>: ISFPs certainly live in the present. Consequentially, they can find it difficult
+            to step back when there's a lot going on and manage difficult situations successfully. They can be prone to
+            avoiding these stress-inducing situations altogether, leading to potential problems further down the road.
+        </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Adventurers aren't the type of people to be money hungry. They afe driven by what they feel they need most:
+            the liberty to allow their creativity to flourish. They love to experiment and in doing so, can set trends.
+            They definitely don't want to settle for a repetitive 9-to-5 job.</p>
+        <p>ISFPs would work well in freelance or consultant position in an industry that they love -be it fashion,
+            interior design or music event management.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>Adventurers make great friends. They are easy-going and don't mind just going with the flow. As long as
+            someone doesn't take things to seriously and are sympathetic, they could make great friends. As the title
+            suggests, adventurers want to explore the world and do things, they have no time for idle conversation.
+            Although laid back, are passionate about the things they love and therefore handle criticism in this regard
+            poorly. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous ISFPs</b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.7904;">
+                <img style="height:100%; width:100%"
+                    src="imgs/billie.jpeg">
+                <p class="name-one" style="text-align:center;">Billie Eilish</p>
+            </div>
+
+            <div class="famous-two" style="flex:.6669;">
+                <img style="height:100%; width:100%"
+                    src="imgs/frida.jpeg">
+                <p class="name-two" style="text-align:center;">Frida Kahlo</p>
+            </div>
+
+            <div class="famous-three" style="flex:.674;">
+                <img style="height:100%; width:100%" src="imgs/potter.jpeg">
+                <p class="name-three" style="text-align:center;">Harry Potter (Harry Potter)</p>
+            </div>
+
+            <div class="famous-four" style="flex:.7407;">
+                <img style="height:100%; width:100%"
+                    src="imgs/hendrix.jpeg">
+                <p class="name-four" style="text-align:center;">Jimi Hendrix</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

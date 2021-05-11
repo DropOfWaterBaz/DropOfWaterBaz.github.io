@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+  </head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg" />
+    <p class="centered-text">Your Personality is INFP!</p>
+  </div>
+
+  <body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+      <div class="summary-image">
+        <img src="imgs/INFP.png" />
+      </div>
+
+      <header-acronym>
+        <div class="deacronym">
+          <char1
+            ><b><u>I</u></b
+            >ntroversion</char1
+          >
+          <char2
+            >i<b><u>N</u></b
+            >tuition
+          </char2>
+          <char3
+            ><b><u>F</u></b
+            >eeling</char3
+          >
+          <char4
+            ><b><u>P</u></b
+            >erceiving
+          </char4>
+        </div>
+
+        <p class="result-intro">
+          INFPs or Mediators are quiet but open-minded people. They are
+          imaginative and creative. This creative energy is funnelled into their
+          personal lives (as opposed to their social life). Mediators can
+          sometimes feel lonely and as they tend not to have a large circle of
+          friends, they look for deeper and more meaningful relationships.
+        </p>
+      </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+      <h2 style="margin-top: 5%">
+        <b>Strengths vs. Weaknesses</b>
+      </h2>
+      <u><b>Strengths</b></u>
+      <p>
+        - <u>Creativity</u>: INFPs are no stranger to letting their mind
+        wander. This and their strong imagination allows them to look at
+        problems from a unique perspective, they have great lateral-thinking
+        skills.
+      </p>
+      <p>
+        - <u>Open-Mindedness</u>: Mediators are tolerant people. They don't look
+        for fault in people and they tend to be accepting of other people's
+        views. They hold themselves to a (often unrealistic) high standard and
+        so are understanding when others make a mistake or who have done wrong
+        in the past.
+      </p>
+      <p>
+        - <u>Generosity</u>: INFPs are unselfish, and when something good works
+        out for them, they are happy to share the happiness. However, this is a
+        double-edged sword as it
+      </p>
+
+      <u><b>Weaknesses</b></u>
+      <p>
+        - <u>Lack of Realism</u>: INFPs are idealistic, and so it is difficult
+        for them to accept a world that is anything other than ideal. It can
+        result in having a perception of reality through a "rose-tinted" lens.
+      </p>
+      <p>
+        - <u>Loneliness</u>: Mediators yearn for deep emotional connection.
+        However, they can have a tough time finding the ability and words to
+        connect to others, which can end up in them feeling alone.
+      </p>
+      <p>
+        - <u>Self-Criticism</u>: Mediators may often be overly-critical of
+        themselves. They struggle to live up to the idealistic expectations that
+        they set for themselves, which has detrimental effect on their
+        self-esteem.
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Careers</b>
+      </h2>
+      <p>
+        Mediators are artistic and free-flowing people. As they spend so much
+        time in their inside world, they love self-expression. There is no
+        perfect job, not something that the idealistic INFPs want to hear. They
+        suit low-stress, low drama occupations that don't get too hectic.
+      </p>
+      <p>
+        With these points in mind and INFPs like to work at their own pace, a
+        career in some sort of writing - biographical, poetic or even a prose
+        narrative.
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Relationships</b>
+      </h2>
+      <p>
+        Mediators often find themselves in the following predicament - they love
+        their time by themselves but can feel lonely when they get it. They want
+        to be well-liked, but often worry about putting their true selves out
+        their. They also don't want to pretend to be someone else in order to be
+        well-liked. For this reason, they flourish in the company of close,
+        meaningful relationships.
+      </p>
+
+      <h2 style="margin-top: 5%">
+        <b>Famous INFPs</b>
+      </h2>
+      <celeb-container>
+        <div class="famous-one" style="flex: .7692">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/aliciaKeys.jpeg"
+          />
+          <p class="name-one" style="text-align: center">Alicia Keys</p>
+        </div>
+
+        <div class="famous-two" style="flex: 0.71199">
+          <img
+            style="height: 100%; width: 100%"
+            src="imgs/bjork.jpeg"
+          />
+          <p class="name-two" style="text-align: center">Björk</p>
+        </div>
+
+        <div class="famous-three" style="flex: 0.815">
+          <img
+            style="height: 100%; width: 100%"
+            src="https://cdn.britannica.com/52/76652-050-F4A6B093/Edgar-Allan-Poe.jpg"
+          />
+          <p class="name-three" style="text-align: center">Edgar Allan Poe</p>
+        </div>
+
+        <div class="famous-four" style="flex: 1">
+          <img
+            style="height: 100%; width: 100%"
+            src="https://cdn.vox-cdn.com/thumbor/gW_GpV-y4JvoTz_lbylaUTi-6To=/0x0:1012x675/1400x1400/filters:focal(426x258:586x418):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/54233641/929914_david_bowie__1__article_story_large.0.jpg"
+          />
+          <p class="name-four" style="text-align: center">David Bowie</p>
+        </div>
+      </celeb-container>
+
+      <p style="text-align: center">
+        How do you feel about this result? Let me know in the box below!
+      </p>
+
+      <div class="feedback-container">
+        <form id="feedbackBox">
+          <textarea
+            style="width: 100%"
+            id="feedback-box"
+            class="feedback-box"
+            name="feedback-box"
+            placeholder="Feedback"
+          ></textarea>
+
+          <div class="submit-container">
+            <input type="submit" class="submit-button" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <form action="index.html">
+        <div class="home-button-container">
+          <button type="submit" class="home-button">Home</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+        authDomain: "finalyearproject-6432e.firebaseapp.com",
+        databaseURL:
+          "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "finalyearproject-6432e",
+        storageBucket: "finalyearproject-6432e.appspot.com",
+        messagingSenderId: "734834590765",
+        appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+        measurementId: "G-4EH7TT67P5",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      var feedbackRef = firebase.database().ref("Collected Data");
+
+      document
+        .getElementById("feedbackBox")
+        .addEventListener("submit", submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+
+        var feedback = getInputVal("feedback-box");
+
+        saveFeedback(feedback);
+        document.getElementById("feedbackBox").reset();
+      }
+
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+
+      // Save message to firebase
+      function saveFeedback(feedback) {
+        var newFeedbackRef = feedbackRef.push();
+        newFeedbackRef.set({
+          feedback: feedback,
+        });
+      }
+    </script>
+  </body>
+</html>

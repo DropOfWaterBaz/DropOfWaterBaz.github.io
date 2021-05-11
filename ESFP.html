@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ESFP!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ESFP.png" />
+        </div>
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>E</u></b>xtraversion</char1>
+                <char2><b><u>S</u></b>ensing</char2>
+                <char3><b><u>F</u></b>eeling</char3>
+                <char4><b><u>P</u></b>erceiving</char4>
+            </div>
+
+            <p class="result-intro"> ESFPs or Entertainers are spontaneous people who get easily excited and want to
+                share this feeling with those around them. They love to put on a show for others and are very social
+                people. They find pleasure in the smallest things in life.
+            </p>
+
+        </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Showmanship</u>: Loving the spotlight, ESFPs will impress and entertain others using a strong creativity
+            and enthusiasm. Every opportunity is one to amuse and engage others and have a bit of fun.</p>
+        <p>- <u>Social Skills</u>: Entertainers can talk about anything to anybody. they are extremely talkative and
+            much of their satisfaction in life comes from the interactions and time spent with others. </p>
+        <p>- <u>Daring</u>: ESFPs are willing to take risks and have no problem pushing the boundaries of their comfort
+            zone. They are bold and want to try everything once.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Avoid Conflict</u>: ESFPs are very non-confrontational and hate conflict. They will try to get out of
+            combative situations which could have future repercussions if problems aren't tackled before they get out of
+            hand.</p>
+        <p>- <u>Emotionally Sensitive</u>: Part of the reason entertainers avoid conflict is that they can take any
+            resulting criticisms to heart. They can react badly to negative feedback. This can result in their social
+            circle avoiding constructive criticisms, meaning that the weaknesses don't get addressed or resolved.</p>
+        <p>- <u>Long-Term Planning</u>: Entertainers very much live for the moment, which although can be seen as a
+            positive as they tend to worry less about the future, can mean that they don't think <i>enough</i> about the
+            future. They struggle to properly plan steps to achieve their goals.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>ESFPs love to engage with people, whether they be known colleagues, customers or strangers. They use their
+            social skills to their advantage by forming relationships with those who have authority over them as well as
+            any professional clients. </p>
+        <p>Due to their vibrant and chirpy personalities, entertainers would be great in a career in the hospitality
+            sector. They are positive and friendly, which is important a career such as nursing or a primary school
+            teacher. They are also suited to more creative fields like the music or fashion industry. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>Entertainers find it difficult to keep their thoughts to themselves. They are enthusiasm, high-energy
+            individuals and people who can handle and even match their lively nature are the best people for them to be
+            friends or romantic partners with. They find it relatively easy to make new friends because they love to do
+            so.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous ESFPs </b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.8;">
+                <img style="height:100%; width:100%"
+                    src="imgs/miley.jpeg">
+                <p class="name-one" style="text-align:center;">Miley Cyrus</p>
+            </div>
+
+            <div class="famous-two" style="flex:1.019;">
+                <img style="height:100%; width:100%"
+                    src="imgs/picasso.jpeg">
+                <p class="name-two" style="text-align:center;">Pablo Picasso</p>
+            </div>
+
+            <div class="famous-three" style="flex:.641;">
+                <img style="height:100%; width:100%"
+                    src="imgs/jessieToyStory.jpeg">
+                <p class="name-three" style="text-align:center;">Jessie (Toy Story)</p>
+            </div>
+
+            <div class="famous-four" style="flex:.6755;">
+                <img style="height:100%; width:100%"
+                    src="imgs/freddieMercury.jpeg">
+                <p class="name-four" style="text-align:center;">Freddie Mercury</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

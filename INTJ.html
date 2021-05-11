@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is INTJ!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/INTJ.png" />
+        </div>
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>I</u></b>ntroversion</char1>
+                <char2>i<b><u>N</u></b>tuition</char2>
+                <char3><b><u>T</u></b>hinking</char3>
+                <char4><b><u>J</u></b>udging</char4>
+            </div>
+
+            <p class="result-intro"> INTJs, also known as Architects, are rational people who analyse everything around
+                them. They question authority and for that reason they have no problem "bending" the rules. They enjoy
+                new ideas but they mostly care about whether or they not can actually come to fruition.
+            </p>
+
+        </header-acronym>
+    </image-header-container>
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Independence</u>: Architects are self-motivated people who like to do things their own way. Rules and
+            and restrictions to doing things in a conventional way are seen as a hindrance by them. </p>
+        <p>- <u>Thorough</u>: INTJs do their research before making a decision and make sure they are well-informed.
+            They don't rely on hunches or "gut feelings", their opinions are backed up by their research and acts as a
+            reassurance for themselves.</p>
+        <p>- <u>Determination</u>: INTJs are driven by the pursuit of their goals. They are dedicated to their ambitions
+            and the honing o their skills. Very few things will stop them from trying to achieve their dreams. </p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Contrary:</u> INTJs do <b>NOT</b> like being told what to do without a sound reason. They can be quite
+            combative and may waste time needlessly arguing against any limitations placed on them.</p>
+        <p>- <u>Emotional handling</u>: Architects are known to see the world from a logical and rational standpoint.
+            This results in them being uninterested in or impatient with emotional matters. This can act as a blockade
+            to their own growth.</p>
+        <p>- <u>Perfectionism</u>: Architects are very thorough when it comes to their work. Although this could be
+            considered a strength, they can be prone to over-critiquing themselves and others. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Architects want to have a meaningful career where they overcome important issues. As a result, they can often
+            find themselves unhappy at the beginning of their professional careers as they are in low-level positions,
+            given trivial tasks. </p>
+        <p> INTJs often prefer to work by themselves rather than in a team. It can give them the most creative freedom
+            without limitations from supervisors or interruptions from teammates.They may like to remain low-key whilst
+            also doing influential work. A career as project managers, architects (as there name suggests) or even a
+            software developer.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>INTJs are quick-witted and cynical, which isn't necessarily the kind of friend everyone wants. However, INTJs
+            don't mind this as they don't want to be friends with everyone. They enjoy the company of people who really
+            get them. They like to be around someone who can match their high-energy brains. They may however struggle
+            to resolve emotional conflict.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous INTJs</b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.7657">
+                <img style="height:100%; width:100%"
+                    src="imgs/tesla.jpeg">
+                <p class="name-one" style="text-align:center;">Nikola Tesla</p>
+            </div>
+
+            <div class="famous-two" style="flex:.664">
+                <img style="height:100%; width:100%"
+                    src="imgs/michelleObama.jpeg">
+                <p class="name-two" style="text-align:center;">Michelle Obama</p>
+            </div>
+
+            <div class="famous-three" style="flex:.827;">
+                <img style="height:100%; width:100%"
+                    src="imgs/janeAusten.jpeg">
+                <p class="name-three" style="text-align:center;">Jane Austen</p>
+            </div>
+
+            <div class="famous-four" style="flex:1;">
+                <img style="height:100%; width:100%"
+                    src="imgs/heisenberg.jpeg">
+                <p class="name-four" style="text-align:center;">Walter White (Breaking Bad)</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

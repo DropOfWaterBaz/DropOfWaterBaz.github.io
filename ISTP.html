@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ISTP!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ISTP.png" />
+        </div>
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>I</u></b>ntroversion</char1>
+                <char2><b><u>S</u></b>ensing</char2>
+                <char3><b><u>T</u></b>hinking</char3>
+                <char4><b><u>P</u></b>erceiving</char4>
+            </div>
+
+            <p class="result-intro">ISTPs or Virtuosos are unique people. They don't need much external motivation to
+                pursuit their goals, they're own drive is enough. they use their senses to explore ideas and the world
+                around them. They like to be in the thick of it, ready to do the dirty work of their latest projects.
+                They like to dissect things like clocks to see how the inner machinations work. They like when others
+                take interest in their work and are always happy to help others. Virtuosos, although friendly, are quite
+                private which is why they are often considered to be rather enigmatic. They are fair and treat others
+                the way they want to be treated themselves.
+            </p>
+        </header-acronym>
+    </image-header-container>
+
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Creativity:</u> Because the way like to pull things apart and put them back together again, virtuosos
+            have a unique way of thinking. They tend to have excellent spatial reasoning and problem-solving skills with
+            which they can use in a wide range of real-life situations.</p>
+        <p>- <u>Energetic</u>: ISTPs require a lot of energy for their projects and this translate to their social life
+            too. They are enthusiastic about most ideas, letting others make suggestions and simply going with the flow.
+        </p>
+        <p>- <u>Crisis Handling</u>: ISTPs have so much hands-on experience across a wide variety of aspects of life
+            that they are almost always prepared to handle an issue should it arise. They don't shy away from a little
+            bit of risk when necessary.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Boredom</u>: One of the reasons that virtuosos are always working at something is that they get bored
+            easily. They are great at figuring out things with little information but may lose focus if something lasts
+            for too long.</p>
+        <p>- <u>Risk</u>: Not afraid of risk-taking and trying new things, ISTPs get themselves into a wide variety of
+            situations. Although risk-taking can come with a big pay-out, it can also result in disaster. </p>
+        <p>- <u>Commitment</u>: Because they get bored easily, ISTPs can worry about making a commitment in case they
+            lose interest halfway through. They like to take things one day at a time and worry about getting trapped
+            into having to do something.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Virtuosos love to know the ins-and-outs, unseen functions and the gears and cogs that make something work.
+            Their brilliant spatial reasoning skills allows them to work in fields that simply wouldn't suit others at
+            all. However, virtuosos themselves don't suit all occupations. They want to see their work in action, and
+            for example something like theoretical physics doesn't intrigue them all too much.</p>
+        <p>For this reason, a career as an engineer, mechanic or carpenter to name a few would be well suited to ISTPs.
+        </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>Virtuosos have such a wide range of experience that it's easy for them to relate to others and be relatable.
+            Although easy-going, virtuosos have problems with commitment, which can be a major issue in both friendships
+            and romantic relationships. Saying no to such commitments may make others feel unwanted. They don't like to
+            be restricted to plans. Being quite private about personal matters, there are few that truly get an insight
+            to an ISTP. They like to enjoy friendly competition with their peers.</p>
+
+
+        <h2 style="margin-top:5%;">
+            <b>Famous ISTPs</b>
+        </h2>
+        <celeb-container>
+            <div class="famous-one" style="flex:.8216;">
+                <img style="height:100%; width:100%"
+                    src="imgs/bearGrylls.jpeg">
+                <p class="name-one" style="text-align:center;">Bear Grylls</p>
+            </div>
+
+            <div class="famous-two" style="flex:.714;">
+                <img style="height:100%; width:100%" src="imgs/scarJo.jpeg">
+                <p class="name-two" style="text-align:center;">Scarlett Johansson</p>
+            </div>
+
+            <div class="famous-three" style="flex:.705">
+                <img style="height:100%; width:100%"
+                    src="imgs/melania.jpeg">
+                <p class="name-three" style="text-align:center;">Melania Trump</p>
+            </div>
+
+            <div class="famous-four" style="flex:.6666;">
+                <img style="height:100%; width:100%"
+                    src="imgs/indi.jpeg">
+                <p class="name-four" style="text-align:center;">Indiana Jones</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

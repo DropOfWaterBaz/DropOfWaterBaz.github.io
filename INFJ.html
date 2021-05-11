@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is INFJ!</p>
+</div>
+
+<body class="results-body" ng-app="FYP" ng-controller="QuizController">
+    <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/INFJ.png" />
+        </div>
+
+        <header-acronym>
+            <div class="deacronym">
+                <char1><b><u>I</u></b>ntroversion</char1>
+                <char2>i<b><u>N</u></b>tuition</char2>
+                <char3><b><u>F</u></b>eeling</char3>
+                <char4><b><u>J</u></b>udging</char4>
+            </div>
+
+            <p class="result-intro">INFJs or Advocates are idealists who take tangible steps to make their ideals into
+                reality. The rarest personality type of them all, they are deeply thoughtful and have great
+                introspection. They want to do what's right and believe in equality and karma.
+            </p>
+
+        </header-acronym>
+    </image-header-container>
+    <div class="result-container">
+        <h2 style="margin-top:5%;">
+            <b>Strengths vs. Weaknesses</b>
+        </h2>
+        <u><b>Strengths</b></u>
+        <p>- <u>Depth</u>: Advocates don't take others at face value. They understand that people have certain motives
+            and needs that they may not actively portray to others and can pick up on what these might be.</p>
+        <p>- <u>Conviction</u>: INFJs hold their principles very dear to them. Their principles are their guidelines to
+            life. When speaking about them, INFJs can be very persuasive as their passion is evident through the way
+            they speak.</p>
+        <p>- <u>Decisiveness</u>: The aforementioned conviction allows INFJs to be more decisive. Will their principles
+            leading them, they have confidence that the decision they make will be the right one.</p>
+
+        <u><b>Weaknesses</b></u>
+        <p>- <u>Headstrong</u>: Advocates are very passionate about their beliefs, however they tend to dismiss those
+            that don't agree with their ideas. INFJs can benefit from hearing out the ideas of others to broaden their
+            views.</p>
+        <p>- <u>Emotionally Private</u>: Although they feel strongly about their personal beliefs, they can be deeply
+            private about their emotions. They feel worried about the possibility of burdening others with their issues.
+            This means they don't ask for help and in turn, don't receive it. </p>
+        <p>- <u>Perfectionism</u>: Both a blessing and a curse. It leads INFJs to sometimes great success, but as a
+            result they are hugely prone to working to the point of exhaustion.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Careers</b>
+        </h2>
+        <p>Advocates are non-materialistic - they would rather work in a field that aligns with their values than in a
+            career where they earn a lot of money. They are humanists that work in pursuit of their ideals, of making
+            the world a better place.</p>
+        <p>Depending on their specific values, a career in law, environmentalism or psychology would suit INFJs. Along
+            as they can better the world in a way they like and in a way they know how.</p>
+
+        <h2 style="margin-top:5%;">
+            <b>Relationships</b>
+        </h2>
+        <p>Relationships are important to advocates. They crave sincerity as they are reluctant to be open with their
+            emotions to new people. They don't like to have friendships that are only there out of convenience, and so
+            can tend to just make small talk to those they are not close to. </p>
+
+        <h2 style="margin-top:5%;">
+            <b>Famous INFJs</b>
+        </h2>
+        <celeb-container>
+
+            <div class="famous-one" style="flex:.616;">
+                <img style="height:100%; width:100%"
+                    src="imgs/lisa.png">
+                <p class="name-one" style="text-align:center;">Lisa Simpson (The Simpsons)</p>
+            </div>
+
+            <div class="famous-two" style="flex:.8697">
+                <img style="height:100%; width:100%"
+                    src="imgs/kdot.jpeg">
+                <p class="name-two" style="text-align:center;">Kendrick Lamar</p>
+            </div>
+
+            <div class="famous-three" style="flex:.801">
+                <img style="height:100%; width:100%"
+                    src="imgs/gandhi.jpeg">
+                <p class="name-three" style="text-align:center;">Mohandas “Mahatma” Gandhi</p>
+            </div>
+
+            <div class="famous-four" style="flex:.738;">
+                <img style="height:100%; width:100%"
+                    src="imgs/nicoleKidman.jpeg">
+                <p class="name-four" style="text-align:center;">Nicole Kidman</p>
+            </div>
+
+        </celeb-container>
+
+        <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+</body>
+
+</html>

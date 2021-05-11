@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>dbaz Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+  </head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ESTJ!</p>
+</div>
+
+    <body class="results-body" ng-app="FYP" ng-controller="QuizController">
+      <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ESTJ.png" />
+        </div>            
+        <header-acronym >
+                <div class="deacronym"> 
+                    <char1><b><u>E</u></b>xtraversion</char1>  
+                    <char2><b><u>S</u></b>ensing</char2>
+                    <char3><b><u>T</u></b>hinking</char3>
+                    <char4><b><u>J</u></b>udging</char4>
+                </div>
+
+                <p class="result-intro"> ESTJs or Executives are logical people are the fist to take charge in a situation. They are traditional people who have a good understanding of what's right and what's wrong. They give back to the community and are believers in law and order. Executives have conviction in their beliefs and are sure about their own knowledge. They can be stubborn and are not fond of compromise.
+                </p>
+
+            </header-acronym>
+      </image-header-container>
+
+      <div class="result-container">
+    <h2 style="margin-top:5%;">                  
+        <b>Strengths vs. Weaknesses</b>
+    </h2>
+    <u><b>Strengths</b></u>
+    <p>- <u>Honesty</u>: Executives are straightforward. They don't believe in metaphors or flowery language but instead communicate via facts and clear information.</p>
+    <p>- <u>Management and Structuring</u>: If there's one thing ESTJs don't like, it's unpredictability. Chaos introduces instability to their lives and so they work to make sure to establish regiment. They do this in both their personal and professional lives. </p>
+    <p>- <u>Integrity</u>: As executives believe so much in authority, they too feel the need to obedient to rules and guidelines. This means they try to what's right at all costs. Following orders in no problem for them and they respect those who have authority above them.</p>
+
+    <u><b>Weaknesses</b></u>
+    <p>- <u>Struggling to Relax</u>: Executives are ambitious, sometimes to the point of self-exhaustion. They also aren't the best at unwinding and can't have fun if it puts them at risk of looking silly. </p>
+    <p>- <u>Emotional Expression</u>: ESTJs don't find it easy to convey their emotions and also have a poor time empathizing with others. They tend to leave their emotions behind as they strive for efficiency and self-improvement.</p>
+    <p>- <u>Judgemental</u>: The same way they don't like to make a fool out of themselves, ESTJs judge others too harshly for doing so - whether it be in a fun context or not. They focus too much on tradition and so can be judgemental of unfamiliar concepts.</p>
+
+    <h2 style="margin-top:5%;">                  
+        <b>Careers</b>
+        </h2>
+        <p>Executives tend to have a knack for knowing what they want to do in their careers and the steps to getting there. They are loyal and thrive in a structured and well-organised system.</p>
+        <p>Being good obeyers, executives would fit well in a military rank. They would also make good judges or lawyers as they have a massive respect for authority and civility.</p>
+
+        <h2 style="margin-top:5%;">           
+            <b>Relationships</b>
+        </h2>       
+        <p>ESTJs tend form relationships with others based on what they have in common and mutual principles. Many of their relationships form out circumstance, but this often makes them stronger as they'll likely have similar experiences. They try to include everyone, but may also be too pushy when trying to do so. Resultantly, the diversity of insights and ideals in their social circle may be lacking.</p>
+
+        <h2 style="margin-top:5%;">   
+            <b>Famous ESTJs</b>
+            </h2>
+            <celeb-container>
+
+                <div class="famous-one" style="flex:.709;">
+                    <img style="height:100%; width:100%" src="imgs/pitbull.jpeg">
+                    <p class="name-one" style="text-align:center;">Pitbull (Mr. Worldwide)</p>
+                </div>
+
+                <div class="famous-two" style="flex:.714;">
+                    <img style="height:100%; width:100%"  src="imgs/judgeJudy.jpeg">
+                    <p class="name-two"style="text-align:center;">Judge Judy</p>
+                </div>
+
+                <div class="famous-three" style="flex:.7497;">
+                    <img style="height:100%; width:100%" src="imgs/dwight.jpeg">
+                    <p class="name-three"style="text-align:center;">Dwight Schrute (The Office US)</p>
+                </div>
+
+                <div class="famous-four"style=" flex:.8;">
+                    <img style="height:100%; width:100%"  src="imgs/kamala.jpeg">
+                    <p class="name-four"style="text-align:center;">Kamala Harris</p>
+                </div>
+
+            </celeb-container>  
+
+            <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+        <div class="feedback-container">
+            <form id="feedbackBox">
+                <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                    placeholder="Feedback"></textarea>
+
+                <div class="submit-container">
+                    <input type="submit" class="submit-button" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+        <form action="index.html">
+            <div class="home-button-container">
+                <button type="submit" class="home-button">Home</button>
+            </div>
+        </form>
+</div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>dbaz Personality test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="resultScript.js"></script>
+  </head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <div class="result-banner-container">
+    <img src="imgs/results-banner.jpeg">
+    <p class="centered-text">Your Personality is ISFJ!</p>
+</div>
+
+    <body class="results-body" ng-app="FYP" ng-controller="QuizController">
+      <image-header-container>
+        <div class="summary-image">
+            <img src="imgs/ISTJ.png" />
+        </div>            
+        
+        <header-acronym>
+                <div class="deacronym"> 
+                    <char1><b><u>I</u></b>ntroversion</char1>  
+                    <char2><b><u>S</u></b>ensing</char2>
+                    <char3><b><u>F</u></b>eeling</char3>
+                    <char4><b><u>J</u></b>udging</char4>
+                </div>
+
+                <p class="result-intro">ISFJs or Defenders are well-rounded people. Though they commonly have traditional values, they are open to different ideas. They have an unusual mix of procrastination and perfectionism - they will always get the job done, but at the last minute. Though introverted, they are quite social and use their brain capacity to observe and remember things about the people around them, as opposed to random information that they deem useless.
+                </p>
+
+            </header-acronym>
+      </image-header-container>
+      <div class="result-container">
+    <h2 style="margin-top:5%;">                  
+        <b>Strengths vs. Weaknesses</b>
+    </h2>
+    <u><b>Strengths</b></u>
+    <p>- <u>Practicality</u>: Defenders use their practical abilities to make their altruistic ideals a reality. They don't shy away from tasks that may be seen as tedious so long as it's something that needs to get done anyway and if it benefits the people they love.</p>
+    <p>- <u>Enthusiasm</u>: When the a task aligns up with one of their goals or ideologies, ISFJs will carry it out with a positive energy. They use their strong imagination to do good. </p>
+    <p>- <u>Kind-Heartedness</u>: Defenders are caring towards their close ones. They display good empathy and are very supportive, lending the time and energy needed to help others overcome challenges. </p>
+
+    <u><b>Weaknesses</b></u>
+    <p>- <u>Reservation</u>: Defenders are often a bit too reserved. Though they are open to new concepts, they can be resistant to change and look down on others who upset the status quo. Ths makes them prone to appearing pessimistic as they can judge others too much based off superficial features.</p>
+    <p>- <u>Modesty</u>: Although humility is an admirable trait, defenders are almost too selfless that they don't get a chance to express their own feelings. They feel as if they're bragging when receiving credit, even if well-deserved.</p>
+    <p>- <u>Self-Exhaustion</u>: ISFJs feel as if they have a responsibility to themselves to perfect many aspects of their life. They get involved in many situations which don't directly involve them in order to keep the peace or make sure the outcome is morally right. This can get them into tricky situations and is a cause for stress and tiring themselves out. </p>
+
+    <h2 style="margin-top:5%;">                  
+        <b>Careers</b>
+        </h2>
+        <p>As defenders are very observant of those around them, they make excellent colleagues and customer relations-oriented employees. They are hard-working and dedicated. They gain satisfaction from seeing the positive outcomes of their work as opposed to receiving credit for their work. Respectful of tradition, they don't mind hierarchical company structures. They implement ideas well and can make order out of a hectic situation, making them top candidates for promotions - even if they're not specifically pursuing one.
+        </p>
+        <p>Classic, structured workplaces tend to lend themselves to the ideal career path of an ISFJ. Professions in schools, hospitals or in the civil services would make for ideal places for and ISFJ. </p>
+
+        <h2 style="margin-top:5%;">           
+            <b>Relationships</b>
+        </h2>       
+        <p>Kind and caring, defenders make great friends. They make friends over period of time through which there is consistent encounters and contact. They are not the kind of people to make a new friend after a single engagement. ISFJs are loyal, almost to a fault. They put the needs of others before their own. Coupled with finding themselves vulnerable when asking for help, they're own priorities can fall behind.  </p>
+
+        <h2 style="margin-top:5%;">   
+            <b>Famous ISFJs </b>
+            </h2>
+            <celeb-container>
+
+                <div class="famous-one"style="flex:1;">
+                    <img style="height:100%; width:100%" src="imgs/bobRoss.jpeg">
+                    <p class="name-one"style="text-align:center;">Bob Ross</p>
+                </div>
+
+                <div class="famous-two"style="flex:.7306;">
+                    <img style="height:100%; width:100%"  src="imgs/beyonce.jpeg">
+                    <p class="name-two" style="text-align:center;">Beyonce</p>
+                </div>
+
+                <div class="famous-three"style="flex:.814;">
+                    <img style="height:100%; width:100%" src="imgs/jimmyCarter.jpeg">
+                    <p class="name-three"style="text-align:center;">Jimmy Carter</p>
+                </div>
+
+                <div class="famous-four"style="flex:.886;">
+                    <img style="height:100%; width:100%"  src="imgs/rosaParks.jpeg">
+                    <p class="name-four"style="text-align:center;">Rosa Parks</p>
+                </div>
+
+            </celeb-container>  
+
+            <p style="text-align:center;">How do you feel about this result? Let me know in the box below!</p>
+
+            <div class="feedback-container">
+                <form id="feedbackBox">
+                    <textarea style="width:100%;" id="feedback-box" class="feedback-box" name="feedback-box"
+                        placeholder="Feedback"></textarea>
+    
+                    <div class="submit-container">
+                        <input type="submit" class="submit-button" value="Submit" />
+                    </div>
+                </form>
+            </div>
+    
+            <form action="index.html">
+                <div class="home-button-container">
+                    <button type="submit" class="home-button">Home</button>
+                </div>
+            </form>
+        </div>
+
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_xR_o0SlUoJb7z410rr50S3SqW3oeoYE",
+            authDomain: "finalyearproject-6432e.firebaseapp.com",
+            databaseURL: "https://finalyearproject-6432e-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "finalyearproject-6432e",
+            storageBucket: "finalyearproject-6432e.appspot.com",
+            messagingSenderId: "734834590765",
+            appId: "1:734834590765:web:a2ebcf86d61116280324a4",
+            measurementId: "G-4EH7TT67P5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var feedbackRef = firebase.database().ref('Collected Data');
+
+        document.getElementById('feedbackBox').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var feedback = getInputVal('feedback-box');
+
+            saveFeedback(feedback);
+            document.getElementById('feedbackBox').reset();
+        }
+
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveFeedback(feedback) {
+            var newFeedbackRef = feedbackRef.push();
+            newFeedbackRef.set({
+                feedback: feedback,
+            });
+        }
+    </script>
+    </body>
+</html>
