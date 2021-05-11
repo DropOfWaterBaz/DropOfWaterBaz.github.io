@@ -3,6 +3,7 @@
 
 function calculateScore() {
   var output="";
+  //var storeInputs =[];
   var radioLength = 0;
   var EISum = 0;
   var SNSum = 0;
@@ -16,6 +17,9 @@ function calculateScore() {
       key = radios[i].getAttribute("key");
       value = radios[i].value;
       question = radios[i].name;
+
+     // storeInputs.push(value);
+
       if (key === "EI") {
         EISum = EISum + +value;
       } else if (key === "SN") {
@@ -56,7 +60,8 @@ function calculateScore() {
   console.log(output);
   console.log(radioLength);
 
-  
+  //console.log(storeInputs);
+
   if(radioLength===16){
     window.location.href = output+".html"
     }
