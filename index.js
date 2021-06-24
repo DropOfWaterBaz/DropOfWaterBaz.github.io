@@ -1,9 +1,5 @@
-
-
-
 function calculateScore() {
-  var output="";
-  //var storeInputs =[];
+  var output = "";
   var radioLength = 0;
   var EISum = 0;
   var SNSum = 0;
@@ -11,14 +7,13 @@ function calculateScore() {
   var JPSum = 0;
   var radios = document.getElementsByTagName("input");
   var value;
+
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === "radio" && radios[i].checked) {
       radioLength++;
       key = radios[i].getAttribute("key");
       value = radios[i].value;
       question = radios[i].name;
-
-     // storeInputs.push(value);
 
       if (key === "EI") {
         EISum = EISum + +value;
@@ -31,7 +26,7 @@ function calculateScore() {
       }
     }
   }
- 
+
   if (EISum >= 12) {
     output += "E";
   } else {
@@ -56,22 +51,16 @@ function calculateScore() {
   console.log(SNSum);
   console.log(TFSum);
   console.log(JPSum);
-
   console.log(output);
   console.log(radioLength);
 
-  //console.log(storeInputs);
-
-  if(radioLength===16){
-    window.location.href = output+".html"
-    }
-    else{
-      alert("Please respond to all statements.")
-    }
-    return output;
+  if (radioLength === 16) {
+    window.location.href = output + ".html";
+  } else {
+    alert("Please respond to all statements.");
+  }
+  return output;
 }
 
 var app = angular.module("FYP", []);
-app.controller("QuizController", ['$scope',function($scope){
-
-}])
+app.controller("QuizController", ["$scope", function ($scope) {}]);
